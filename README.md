@@ -43,16 +43,15 @@ The following technologies are used in this project:
 * **Matplotlib** for visualization
 * **Scikit-learn** for machine learning
 * **TensorFlow / Deep Learning (planned)**
+  
+ ## Project Structure
 
-## Project Structure
-
-```
 OceanPlatform
 │
-├── annual.csv
-├── load_dataset.py
-├── README.md
-```
+├── annual.csv              # Ocean temperature dataset
+├── load_dataset.py         # Script to load and visualize data
+├── requirements.txt        # Required Python libraries
+└── README.md               # Project documentation
 
 ## How to Run the Project
 
