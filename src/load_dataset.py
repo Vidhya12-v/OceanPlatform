@@ -1,15 +1,15 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv("annual.csv")
+# Load dataset
+df = pd.read_csv("data/annual.csv")
 
 print("Dataset Loaded Successfully")
 print(df.head())
 
-# Plot temperature trend
-plt.figure(figsize=(10,5))
+# Plot graph
 plt.plot(df["Year"], df["Mean"])
-plt.title("Global Ocean Temperature Trend")
 plt.xlabel("Year")
-plt.ylabel("Temperature Anomaly")
+plt.ylabel("Temperature")
+plt.title("Ocean Temperature Trend")
 plt.show()
