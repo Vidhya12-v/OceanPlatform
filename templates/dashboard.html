@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI-Driven Ocean Data Platform 🌊</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f0f8ff; }
+        h1 { color: #004080; }
+        table { border-collapse: collapse; width: 70%; margin-bottom: 20px; }
+        th, td { border: 1px solid #004080; padding: 8px; text-align: center; }
+        th { background-color: #cce0ff; }
+        img { max-width: 600px; margin: 10px 0; }
+        .section { margin-bottom: 40px; }
+    </style>
+</head>
+<body>
+    <h1>AI-Driven Oceanographic Data Platform 🌊</h1>
+
+    <div class="section">
+        <h2>Dataset Preview</h2>
+        <table>
+            <tr>
+                {% for col in columns %}
+                    <th>{{ col }}</th>
+                {% endfor %}
+            </tr>
+            {% for row in data %}
+            <tr>
+                {% for col in columns %}
+                    <td>{{ row[col] }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Visualizations</h2>
+        {% for plot in plots %}
+            <h3>{{ plot }}</h3>
+            <img src="/plots/{{ plot }}" alt="{{ plot }}">
+        {% endfor %}
+    </div>
+
+    <div class="section">
+        <h2>Future Predictions</h2>
+        <ul>
+            {% for year, temp in predictions.items() %}
+                <li>{{ year }}: {{ temp }} °C</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
